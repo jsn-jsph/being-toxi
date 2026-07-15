@@ -14,7 +14,7 @@ interface ContactLink {
 const contactLinks: ContactLink[] = [
   {
     name: "Email",
-    value: "hello@beingtoxi.com",
+    value: "jessinj36@gmail.com",
     href: "mailto:hello@beingtoxi.com",
     icon: (
       <svg className="w-6 h-6 text-red-500 fill-current" viewBox="0 0 24 24">
@@ -25,7 +25,7 @@ const contactLinks: ContactLink[] = [
   {
     name: "Instagram",
     value: "@beingtoxi",
-    href: "https://instagram.com", // Fallback to main page or user can replace with their link
+    href: "https://www.instagram.com/_being_toxi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==", // Fallback to main page or user can replace with their link
     icon: (
       <svg className="w-6 h-6 text-red-500 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
         <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -34,20 +34,11 @@ const contactLinks: ContactLink[] = [
       </svg>
     ),
   },
-  {
-    name: "WhatsApp",
-    value: "Send Message",
-    href: "https://wa.me/#", // User can replace with their actual phone link
-    icon: (
-      <svg className="w-6 h-6 text-red-500 fill-current" viewBox="0 0 24 24">
-        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.73-1.464L0 24zm6.59-4.846c1.6.95 3.197 1.451 4.785 1.451 5.586 0 10.121-4.52 10.124-10.077.002-2.69-1.04-5.22-2.93-7.11C16.634 1.528 14.11 0.487 11.43 0.487 5.844.487 1.31 5.008 1.307 10.565c-.001 1.7.48 3.359 1.396 4.787L1.675 21.9l6.732-1.745z" />
-      </svg>
-    ),
-  },
+
   {
     name: "LinkedIn",
-    value: "being-toxi",
-    href: "https://linkedin.com",
+    value: "Jessin Joseph",
+    href: "https://www.linkedin.com/in/jessin-joseph-240a5331a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     icon: (
       <svg className="w-6 h-6 text-red-500 fill-current" viewBox="0 0 24 24">
         <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />

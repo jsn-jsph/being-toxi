@@ -111,7 +111,7 @@ export default function Hero({ hasEntered }: HeroProps) {
           <span className="hidden md:inline text-neutral-700 select-none">•</span>
           <span>Video Editing</span>
           <span className="hidden md:inline text-neutral-700 select-none">•</span>
-          <span>Motion Design</span>
+          <span>TEXT Design</span>
         </div>
       </div>
 
@@ -123,8 +123,8 @@ export default function Hero({ hasEntered }: HeroProps) {
         <span className="text-[9px] tracking-[0.35em] uppercase text-neutral-500 font-mono">
           Scroll to explore
         </span>
-        <div className="w-[1px] h-14 bg-neutral-800 relative overflow-hidden">
-          <div className="absolute top-0 left-0 right-0 h-4 bg-red-600 animate-scroll-down" />
+        <div className="w-[1px] h-14 bg-neutral-500 relative overflow-hidden">
+          <div className="absolute top-0 left-0 right-0 h-5 bg-red-600 animate-scroll-down" />
         </div>
       </div>
     </section>

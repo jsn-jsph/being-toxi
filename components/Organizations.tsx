@@ -9,13 +9,7 @@ const brandsRow1 = [
 ];
 
 const brandsRow2 = [
-  "VOGUE",
-  "NIKE",
-  "NATIONAL GEOGRAPHIC",
-  "VANGUARD APPAREL",
-  "MTV INDIA",
-  "PUMA",
-  "A24 FILMS",
+  "J3 EDU VOYAGE","&","ADOTZEE.in","&"
 ];
 
 export default function Organizations() {

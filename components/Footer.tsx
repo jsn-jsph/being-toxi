@@ -11,7 +11,7 @@ export default function Footer() {
             © {new Date().getFullYear()} BEING TOXI. ALL RIGHTS RESERVED.
           </p>
           <p className="text-neutral-600 font-light text-[9px] md:text-[10px]">
-            Designed & Developed by Jessin Joseph & Abin M Prakash
+            Designed & Developed by Jessin Joseph
           </p>
         </div>
 
