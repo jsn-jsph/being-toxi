@@ -37,7 +37,7 @@ const projectsData: Project[] = [
     id: "echovisions",
     number: "PROJECT 02",
     title: "NANDHI HILLS",
-    videoSrc: "/videos/Albin.mp4 ",
+    videoSrc: "/videos/Albin.mp4",
     instagramLink: "https://www.instagram.com/reel/DV8ULlrgty2/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     description: "A surreal, glitch-art music video exploring memory loops, digital isolation, and cybernetic identity.",
     behindEdit: "We blended 3D volumetric light paths with live-action green screen clips, running them through a custom VHS damage shader in post-production.",
