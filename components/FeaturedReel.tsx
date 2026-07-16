@@ -142,7 +142,7 @@ export default function FeaturedReel() {
           playsInline
         >
           {/* Main user-supplied project reel */}
-          <source src="./videos/2nd Out Out.mp4" type="video/mp4" />
+          <source src=".\videos\finale.mp4" type="video/mp4" />
           {/* High-quality cinematic public fallback stream */}
           <source
             src="https://www.instagram.com/reel/DYhSp2hhmoo/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="

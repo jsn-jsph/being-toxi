@@ -10,6 +10,7 @@ interface Project {
   title: string;
   videoSrc: string;
   externalLink?: string;
+  instagramLink?: string;
   description: string;
   behindEdit: string;
   credits: {
@@ -22,8 +23,9 @@ const projectsData: Project[] = [
   {
     id: "midnight-run",
     number: "PROJECT 01",
-    title: "MIDNIGHT RUN",
-    videoSrc: "/videos/showreel.mp4",
+    title: "ACHARYA INSTITUTES",
+    videoSrc: "/videos/haaaa.mp4",
+    instagramLink: "https://www.instagram.com/reel/DXWyy6ZCO9F/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     description: "A neon-soaked, gritty short film capturing the adrenaline of a midnight escape through desolate city streets.",
     behindEdit: "To achieve the anamorphic lens flare look, we crafted custom post-processing glow maps and color-graded the shadows with deep teal-green undertones.",
     credits: {
@@ -34,8 +36,9 @@ const projectsData: Project[] = [
   {
     id: "echovisions",
     number: "PROJECT 02",
-    title: "ECHOVISIONS",
-    videoSrc: "https://assets.mixkit.co/videos/preview/mixkit-animation-of-futuristic-devices-42223-large.mp4",
+    title: "NANDHI HILLS",
+    videoSrc: "/videos/Albin.mp4 ",
+    instagramLink: "https://www.instagram.com/reel/DV8ULlrgty2/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     description: "A surreal, glitch-art music video exploring memory loops, digital isolation, and cybernetic identity.",
     behindEdit: "We blended 3D volumetric light paths with live-action green screen clips, running them through a custom VHS damage shader in post-production.",
     credits: {
@@ -46,8 +49,9 @@ const projectsData: Project[] = [
   {
     id: "vanguard-apparel",
     number: "PROJECT 03",
-    title: "VANGUARD APPAREL",
-    videoSrc: "https://assets.mixkit.co/videos/preview/mixkit-woman-modeling-athleisure-apparel-42240-large.mp4",
+    title: "SAMPLE WORKS",
+    videoSrc: "/videos/thammil.mp4",
+    instagramLink: "https://www.instagram.com/reel/DWjDYxwAUhW/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     description: "High-octane promotional campaign showcasing athletic wear dynamically in harsh, urban landscapes.",
     behindEdit: "Every cut is synchronized to the sound effects. We layered sub-bass drop effects and metallic whooshes directly in sync with lens whip-pans.",
     credits: {
@@ -55,11 +59,12 @@ const projectsData: Project[] = [
       abin: ["Camera Operator", "Sound Design"],
     },
   },
-  {
+   {
     id: "solitude",
     number: "PROJECT 04",
-    title: "SOLITUDE",
-    videoSrc: "https://assets.mixkit.co/videos/preview/mixkit-waves-crashing-on-rocks-from-above-42232-large.mp4",
+    title: "AMBANAD HILLS",
+    videoSrc: "/videos/heeee.mp4",
+    instagramLink: "https://www.instagram.com/reel/DPl65qjAbZc/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     description: "An intimate profile documentary of a lighthouse keeper living off the rugged, windswept coastline.",
     behindEdit: "Shot entirely in natural overcast lighting. The challenge was maintaining skin tone accuracy while applying a faded cinematic film stock LUT.",
     credits: {
@@ -67,12 +72,28 @@ const projectsData: Project[] = [
       abin: ["Drone Cinematography", "Lead Colorist"],
     },
   },
+  
+  {
+    id: "solitude",
+    number: "PROJECT 05",
+    title: "HABBA AIT BNGLR",
+    videoSrc: "/videos/kaaaa.mp4",
+    instagramLink: "https://www.instagram.com/reel/DVwJlkvCKMm/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    description: "An intimate profile documentary of a lighthouse keeper living off the rugged, windswept coastline.",
+    behindEdit: "Shot entirely in natural overcast lighting. The challenge was maintaining skin tone accuracy while applying a faded cinematic film stock LUT.",
+    credits: {
+      jessin: ["Interviewer", "Editing & Pacing"],
+      abin: ["Drone Cinematography", "Lead Colorist"],
+    },
+  },
+ 
   {
     id: "metropolis-2088",
-    number: "PROJECT 05",
-    title: "METROPOLIS 2088",
-    videoSrc: "https://assets.mixkit.co/videos/preview/mixkit-futuristic-cyberpunk-city-street-42226-large.mp4",
+    number: "PROJECT 06",
+    title: "HABBA TURBULENCE (AIT BNGLR)",
+    videoSrc: "/videos/ooo.mp4",
     externalLink: "https://www.instagram.com/reel/DXWyy6ZCO9F/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    instagramLink: "https://www.instagram.com/reel/DXWyy6ZCO9F/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     description: "A speculative 3D environment concept trailer displaying a neon cyberpunk future cityscape.",
     behindEdit: "Rendered in Unreal Engine 5, we integrated physical camera tracking data to composite realistic lens dirt, grain, and chromatic aberration.",
     credits: {
@@ -80,6 +101,7 @@ const projectsData: Project[] = [
       abin: ["3D Animation", "VFX Compositing"],
     },
   },
+  
 ];
 
 export default function Projects() {
@@ -153,49 +175,33 @@ export default function Projects() {
               className="w-screen h-screen flex-shrink-0 flex flex-col md:flex-row items-center justify-center p-6 md:p-20 lg:p-24 border-r border-white/5 select-none bg-black/20 relative"
             >
               {/* Left Side: Video Preview Card */}
-              {project.externalLink ? (
-                <a
-                  href={project.externalLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full md:w-[45%] max-w-[420px] aspect-[9/16] relative group/project overflow-hidden border border-white/10 rounded-[1.5rem] shadow-[0_25px_80px_rgba(0,0,0,0.45)] mb-6 md:mb-0 block"
-                >
-                  <video
-                    className="w-full h-full object-cover object-center opacity-60 group-hover/project:opacity-90 group-hover/project:scale-[1.03] transition-all duration-700 ease-out"
-                    src={project.videoSrc}
-                    loop
-                    muted
-                    playsInline
-                    autoPlay
-                    preload="metadata"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="rounded-full border border-white/20 bg-black/40 px-4 py-2 text-[10px] md:text-xs font-mono uppercase tracking-[0.3em] text-white backdrop-blur-sm">
-                      Open Reel
-                    </span>
-                  </div>
-                  <div className="absolute bottom-4 left-4 font-mono text-[9px] md:text-xs text-neutral-400 tracking-wider">
-                    PREVIEW FEED // {project.number}
-                  </div>
-                </a>
-              ) : (
-                <div className="w-full md:w-[45%] max-w-[420px] aspect-[9/16] relative group/project overflow-hidden border border-white/10 rounded-[1.5rem] shadow-[0_25px_80px_rgba(0,0,0,0.45)] mb-6 md:mb-0">
-                  <video
-                    className="w-full h-full object-cover object-center opacity-60 group-hover/project:opacity-90 group-hover/project:scale-[1.03] transition-all duration-700 ease-out"
-                    src={project.videoSrc}
-                    loop
-                    muted
-                    playsInline
-                    autoPlay
-                    preload="metadata"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
-                  <div className="absolute bottom-4 left-4 font-mono text-[9px] md:text-xs text-neutral-400 tracking-wider">
-                    PREVIEW FEED // {project.number}
-                  </div>
+              <div
+                className={`w-full md:w-[45%] max-w-[420px] relative group/project overflow-hidden border border-white/10 rounded-[1.5rem] shadow-[0_25px_80px_rgba(0,0,0,0.45)] mb-6 md:mb-0 ${["midnight-run", "echovisions", "vanguard-apparel", "metropolis-2088"].includes(project.id) ? "aspect-[9/16]" : "aspect-[16/9]"}`}
+              >
+                <video
+                  className="w-full h-full object-cover object-center opacity-60 group-hover/project:opacity-90 group-hover/project:scale-[1.03] transition-all duration-700 ease-out"
+                  src={project.videoSrc}
+                  loop
+                  muted
+                  playsInline
+                  autoPlay
+                  preload="metadata"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
+                {(project.instagramLink || project.externalLink) && ["PROJECT 01", "PROJECT 02", "PROJECT 03", "PROJECT 04"].includes(project.number) && (
+                  <a
+                    href={project.instagramLink || project.externalLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute bottom-4 right-4 z-20 pointer-events-auto rounded-full border border-white/20 bg-black/70 px-3 py-2 text-[10px] md:text-xs font-mono uppercase tracking-[0.3em] text-white backdrop-blur-sm transition hover:bg-white/10"
+                  >
+                    Instagram
+                  </a>
+                )}
+                <div className="absolute bottom-4 left-4 font-mono text-[9px] md:text-xs text-neutral-400 tracking-wider">
+                  PREVIEW FEED // {project.number}
                 </div>
-              )}
+              </div>
 
               {/* Right Side: Project Info */}
               <div className="w-full md:w-1/2 md:pl-12 lg:pl-16 flex flex-col items-start text-left justify-center">
