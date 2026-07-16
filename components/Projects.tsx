@@ -19,6 +19,9 @@ interface Project {
   };
 }
 
+const portraitProjectIds = ["midnight-run", "echovisions", "vanguard-apparel", "metropolis-2088"];
+const portraitProjectNumbers = ["PROJECT 01", "PROJECT 02", "PROJECT 03", "PROJECT 04", "PROJECT 07"];
+
 const projectsData: Project[] = [
   {
     id: "midnight-run",
@@ -36,8 +39,8 @@ const projectsData: Project[] = [
   {
     id: "echovisions",
     number: "PROJECT 02",
-    title: "NANDHI HILLS",
-    videoSrc: "https://res.cloudinary.com/ubsmxhqk/video/upload/v1784184647/Albin_bbd4u3.mp4",
+    title: "ADOTZEE.in",
+    videoSrc: "https://res.cloudinary.com/ubsmxhqk/video/upload/v1784187121/adoot_tzfhxp.mp4",
     instagramLink: "https://www.instagram.com/reel/DV8ULlrgty2/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     description: "A surreal, glitch-art music video exploring memory loops, digital isolation, and cybernetic identity.",
     behindEdit: "We blended 3D volumetric light paths with live-action green screen clips, running them through a custom VHS damage shader in post-production.",
@@ -59,9 +62,22 @@ const projectsData: Project[] = [
       abin: ["Camera Operator", "Sound Design"],
     },
   },
+  {
+    id: "echovisions",
+    number: "PROJECT 04",
+    title: "NANDHI HILLS",
+    videoSrc: "https://res.cloudinary.com/ubsmxhqk/video/upload/v1784184647/Albin_bbd4u3.mp4",
+    instagramLink: "https://www.instagram.com/reel/DV8ULlrgty2/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    description: "A surreal, glitch-art music video exploring memory loops, digital isolation, and cybernetic identity.",
+    behindEdit: "We blended 3D volumetric light paths with live-action green screen clips, running them through a custom VHS damage shader in post-production.",
+    credits: {
+      jessin: ["Direction", "Creative Concept"],
+      abin: ["3D Motion Graphics", "VFX Compositing"],
+    },
+  },
    {
     id: "solitude",
-    number: "PROJECT 04",
+    number: "PROJECT 05",
     title: "AMBANAD HILLS",
     videoSrc: "https://res.cloudinary.com/ubsmxhqk/video/upload/v1784184680/heeee_ce0dlk.mp4",
     instagramLink: "https://www.instagram.com/reel/DPl65qjAbZc/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
@@ -74,8 +90,8 @@ const projectsData: Project[] = [
   },
   
   {
-    id: "solitude",
-    number: "PROJECT 05",
+    id: "solitud",
+    number: "PROJECT 06",
     title: "HABBA AIT BNGLR",
     videoSrc: "https://res.cloudinary.com/ubsmxhqk/video/upload/v1784184659/kaaaa_vjd6se.mp4",
     instagramLink: "https://www.instagram.com/reel/DVwJlkvCKMm/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
@@ -89,7 +105,7 @@ const projectsData: Project[] = [
  
   {
     id: "metropolis-2088",
-    number: "PROJECT 06",
+    number: "PROJECT 07",
     title: "HABBA TURBULENCE (AIT BNGLR)",
     videoSrc: "https://res.cloudinary.com/ubsmxhqk/video/upload/v1784184651/ooo_hpkzi9.mp4",
     externalLink: "https://www.instagram.com/reel/DXWyy6ZCO9F/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
@@ -176,7 +192,7 @@ export default function Projects() {
             >
               {/* Left Side: Video Preview Card */}
               <div
-                className={`w-full md:w-[45%] max-w-[420px] relative group/project overflow-hidden border border-white/10 rounded-[1.5rem] shadow-[0_25px_80px_rgba(0,0,0,0.45)] mb-6 md:mb-0 ${["midnight-run", "echovisions", "vanguard-apparel", "metropolis-2088"].includes(project.id) ? "aspect-[9/16]" : "aspect-[16/9]"}`}
+                className={`w-full md:w-[45%] max-w-[420px] relative group/project overflow-hidden border border-white/10 rounded-[1.5rem] shadow-[0_25px_80px_rgba(0,0,0,0.45)] mb-6 md:mb-0 ${portraitProjectNumbers.includes(project.number) ? "aspect-[9/16]" : "aspect-[16/9]"}`}
               >
                 <video
                   className="w-full h-full object-cover object-center opacity-60 group-hover/project:opacity-90 group-hover/project:scale-[1.03] transition-all duration-700 ease-out"
@@ -188,7 +204,7 @@ export default function Projects() {
                   preload="metadata"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
-                {(project.instagramLink || project.externalLink) && ["PROJECT 01", "PROJECT 02", "PROJECT 03", "PROJECT 04"].includes(project.number) && (
+                {(project.instagramLink || project.externalLink) && (portraitProjectIds.includes(project.id) || ["PROJECT 05", "PROJECT 06"].includes(project.number)) && (
                   <a
                     href={project.instagramLink || project.externalLink}
                     target="_blank"
