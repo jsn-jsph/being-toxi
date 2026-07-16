@@ -9,7 +9,7 @@ const brandsRow1 = [
 ];
 
 const brandsRow2 = [
-  "J3 EDU VOYAGE","&","ADOTZEE.in","&"
+  "J3 EDU VOYAGE","-","ADOTZEE.in","-","AIGS BNGLR","-",
 ];
 
 export default function Organizations() {

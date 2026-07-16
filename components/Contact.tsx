@@ -94,14 +94,6 @@ export default function Contact() {
         </div>
 
         {/* Big CTA Email */}
-        <a
-          href="mailto:hello@beingtoxi.com"
-          className="group relative mb-20 text-3xl md:text-6xl lg:text-7xl font-black tracking-wider text-white hover:text-red-500 transition-colors duration-500 text-center uppercase"
-        >
-          hello@beingtoxi.com
-          {/* Animated underline */}
-          <span className="absolute left-0 bottom-0 w-0 h-[2px] md:h-[4px] bg-red-600 group-hover:w-full transition-all duration-500 ease-out" />
-        </a>
 
         {/* Contact Grid links */}
         <div

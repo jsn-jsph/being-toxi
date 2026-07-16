@@ -25,7 +25,7 @@ const servicesList: ServiceItem[] = [
     num: "02",
     title: "Videography",
     description: "Capturing striking, high-fidelity moving images with professional gear and dynamic movement.",
-    details: ["4K Cinematography", "FPV & Drone Footage", "Gimbal & Rig Operations", "Lighting Design"],
+    details: ["4K Cinematography",  "Gimbal Operations", "Lighting Design"],
   },
   {
     id: "editing",
@@ -37,7 +37,7 @@ const servicesList: ServiceItem[] = [
   {
     id: "motion-design",
     num: "04",
-    title: "Motion Design",
+    title: "Motion Design (CURRENTLY IN BETA)",
     description: "Designing custom graphic overlays, VFX, and title animations to elevate visual production.",
     details: ["3D Camera Tracking", "Glitch & Title Animation", "Green Screen Compositing", "Promotional Promos VFX"],
   },
