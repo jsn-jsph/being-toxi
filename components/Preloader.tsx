@@ -216,7 +216,7 @@ export default function Preloader({ onEnter }: PreloaderProps) {
           onClick={handleEnter}
           className="group mt-12 relative px-8 py-3 border border-red-600 rounded-full text-white text-xs md:text-sm font-semibold tracking-[0.2em] uppercase overflow-hidden cursor-pointer hover:shadow-[0_0_15px_rgba(220,38,38,0.5)] transition-all duration-300"
         >
-          <span className="relative z-10">Enter Experience</span>
+          <span className="relative z-10">View Portfolio</span>
           <span className="absolute inset-0 bg-red-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
         </button>
       </div>
