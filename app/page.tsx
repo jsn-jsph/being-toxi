@@ -35,7 +35,7 @@ export default function Home() {
       <main className={`relative transition-opacity duration-700 ${hasEntered ? "opacity-100" : "opacity-0"}`}>
         <Hero hasEntered={hasEntered} />
         <Intro />
-        <FeaturedReel />
+       <FeaturedReel />
         <Projects />
         <Organizations />
         <Services />

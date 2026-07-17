@@ -74,12 +74,12 @@ export default function Services() {
   return (
     <section
       ref={containerRef}
-      className="relative py-24 md:py-36 bg-[#050505] border-b border-white/5 select-none"
+      className="relative py-10 md:py-16 bg-[#050505] border-b border-white/5 select-none"
     >
       {/* Background cinematic highlight */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] bg-[radial-gradient(circle,rgba(177,18,38,0.04)_0%,transparent_60%)] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
+      <div className="max-w-7xl mx-auto px-6 mb-8 text-center">
         <span className="font-mono text-xs text-red-600 font-bold tracking-[0.35em] uppercase mb-4 block">
           CAPABILITIES
         </span>
@@ -91,12 +91,12 @@ export default function Services() {
       {/* Services Grid */}
       <div
         ref={cardsRef}
-        className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 relative z-10"
+        className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 relative z-10"
       >
         {servicesList.map((service) => (
           <div
             key={service.id}
-            className="group relative bg-black/40 border border-white/5 rounded-xl p-8 backdrop-blur-md transition-all duration-500 hover:border-red-600/30 hover:shadow-[0_10px_30px_rgba(177,18,38,0.06)] hover:-translate-y-2 flex flex-col justify-between min-h-[320px]"
+            className="group relative bg-black/40 border border-white/5 rounded-xl p-6 backdrop-blur-md transition-all duration-500 hover:border-red-600/30 hover:shadow-[0_10px_30px_rgba(177,18,38,0.06)] hover:-translate-y-2 flex flex-col justify-between min-h-[260px]"
           >
             {/* Top Border Indicator */}
             <div className="absolute top-0 left-8 right-8 h-[1px] bg-gradient-to-r from-transparent via-red-600/0 to-transparent group-hover:via-red-600/80 transition-all duration-700" />

@@ -39,9 +39,9 @@ export default function Organizations() {
   return (
     <section
       ref={containerRef}
-      className="relative py-24 md:py-36 bg-[#050505] overflow-hidden border-b border-white/5 select-none"
+      className="relative py-10 md:py-16 bg-[#050505] overflow-hidden border-b border-white/5 select-none"
     >
-      <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
+      <div className="max-w-7xl mx-auto px-6 mb-8 text-center">
         <span className="font-mono text-xs text-red-600 font-bold tracking-[0.35em] uppercase mb-4 block">
           PARTNERSHIPS
         </span>
@@ -54,7 +54,7 @@ export default function Organizations() {
       </div>
 
       {/* Marquee Rows Container */}
-      <div className="flex flex-col gap-6 md:gap-10 w-full relative">
+      <div className="flex flex-col gap-4 md:gap-6 w-full relative">
         {/* Row 1 - Left to Right */}
         <div className="w-full overflow-hidden flex whitespace-nowrap mask-gradient relative">
           <div className="animate-marquee flex gap-8 md:gap-16">

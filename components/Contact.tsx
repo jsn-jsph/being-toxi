@@ -77,11 +77,11 @@ export default function Contact() {
   return (
     <section
       ref={containerRef}
-      className="relative py-24 md:py-36 bg-[#050505] border-b border-white/5 select-none"
+      className="relative py-10 md:py-16 bg-[#050505] border-b border-white/5 select-none"
     >
       <div className="max-w-7xl mx-auto px-6 flex flex-col items-center">
         {/* Section Headers */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <span className="font-mono text-xs text-red-600 font-bold tracking-[0.35em] uppercase mb-4 block">
             GET IN TOUCH
           </span>
@@ -98,7 +98,7 @@ export default function Contact() {
         {/* Contact Grid links */}
         <div
           ref={linksRef}
-          className="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
         >
           {contactLinks.map((link) => (
             <a
@@ -106,7 +106,7 @@ export default function Contact() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group/card flex items-center gap-4 bg-black/40 border border-white/5 rounded-xl p-6 backdrop-blur-md transition-all duration-500 hover:border-red-600/30 hover:bg-neutral-950/40 hover:-translate-y-1 hover:shadow-[0_10px_25px_rgba(177,18,38,0.04)]"
+              className="group/card flex items-center gap-4 bg-black/40 border border-white/5 rounded-xl p-4 backdrop-blur-md transition-all duration-500 hover:border-red-600/30 hover:bg-neutral-950/40 hover:-translate-y-1 hover:shadow-[0_10px_25px_rgba(177,18,38,0.04)]"
             >
               {/* Icon Container with subtle animation */}
               <div className="w-12 h-12 rounded-lg bg-neutral-900 flex items-center justify-center border border-white/5 transition-colors duration-500 group-hover/card:bg-red-950/20 group-hover/card:border-red-600/20">

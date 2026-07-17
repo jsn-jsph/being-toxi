@@ -19,7 +19,7 @@ interface Project {
   };
 }
 
-const portraitProjectIds = ["midnight-run", "echovisions", "vanguard-apparel", "metropolis-2088"];
+const portraitProjectIds = ["midnight-run", "echovisions", "vanguard-apparel", "echovision", "metropolis-2088"];
 const portraitProjectNumbers = ["PROJECT 01", "PROJECT 02", "PROJECT 03", "PROJECT 04", "PROJECT 07"];
 
 const projectsData: Project[] = [
@@ -41,7 +41,7 @@ const projectsData: Project[] = [
     number: "PROJECT 02",
     title: "ADOTZEE.in",
     videoSrc: "https://res.cloudinary.com/ubsmxhqk/video/upload/v1784187121/adoot_tzfhxp.mp4",
-    instagramLink: "https://www.instagram.com/reel/DV8ULlrgty2/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    instagramLink: "https://www.instagram.com/reel/DVtBdFGE5tS/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     description: "A surreal, glitch-art music video exploring memory loops, digital isolation, and cybernetic identity.",
     behindEdit: "We blended 3D volumetric light paths with live-action green screen clips, running them through a custom VHS damage shader in post-production.",
     credits: {
@@ -63,7 +63,7 @@ const projectsData: Project[] = [
     },
   },
   {
-    id: "echovisions",
+    id: "echovision",
     number: "PROJECT 04",
     title: "NANDHI HILLS",
     videoSrc: "https://res.cloudinary.com/ubsmxhqk/video/upload/v1784184647/Albin_bbd4u3.mp4",
@@ -90,7 +90,7 @@ const projectsData: Project[] = [
   },
   
   {
-    id: "solitud",
+    id: "solitudee-11",
     number: "PROJECT 06",
     title: "HABBA AIT BNGLR",
     videoSrc: "https://res.cloudinary.com/ubsmxhqk/video/upload/v1784184659/kaaaa_vjd6se.mp4",
@@ -108,7 +108,6 @@ const projectsData: Project[] = [
     number: "PROJECT 07",
     title: "HABBA TURBULENCE (AIT BNGLR)",
     videoSrc: "https://res.cloudinary.com/ubsmxhqk/video/upload/v1784184651/ooo_hpkzi9.mp4",
-    externalLink: "https://www.instagram.com/reel/DXWyy6ZCO9F/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     instagramLink: "https://www.instagram.com/reel/DXWyy6ZCO9F/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     description: "A speculative 3D environment concept trailer displaying a neon cyberpunk future cityscape.",
     behindEdit: "Rendered in Unreal Engine 5, we integrated physical camera tracking data to composite realistic lens dirt, grain, and chromatic aberration.",
@@ -119,6 +118,9 @@ const projectsData: Project[] = [
   },
   
 ];
+
+const totalSlides = projectsData.length + 1;
+const horizontalSectionHeightVh = totalSlides * 100;
 
 export default function Projects() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -142,7 +144,7 @@ export default function Projects() {
         pin: true,
         scrub: 1,
         start: "top top",
-        end: () => `+=${rail.scrollWidth}`,
+        end: () => `+=${rail.scrollWidth - window.innerWidth}`,
         invalidateOnRefresh: true,
       },
     });
@@ -154,9 +156,12 @@ export default function Projects() {
   }, []);
 
   return (
-    <div ref={sectionRef} className="relative w-full bg-[#050505] h-[600vh]">
+    <div
+  ref={sectionRef}
+  className="relative w-full bg-[#050505]"
+>
       {/* Sticky viewport container */}
-      <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center bg-[#050505]">
+     <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center bg-[#050505]">
         
         {/* Scrollable horizontal rail track */}
         <div
@@ -164,7 +169,7 @@ export default function Projects() {
           className="flex flex-row flex-nowrap h-full w-max items-center"
         >
           {/* Introduction Slide */}
-          <div className="w-screen h-screen flex-shrink-0 flex flex-col justify-center px-8 md:px-24 border-r border-white/5 select-none relative">
+          <div className="w-screen h-auto flex-shrink-0 flex flex-col justify-center px-6 md:px-16 lg:px-24 border-r border-white/5 select-none relative">
             <div className="absolute inset-8 md:inset-20 border border-white/5 pointer-events-none">
               <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-white/20" />
               <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-white/20" />
@@ -188,7 +193,7 @@ export default function Projects() {
           {projectsData.map((project) => (
             <div
               key={project.id}
-              className="w-screen h-screen flex-shrink-0 flex flex-col md:flex-row items-center justify-center p-6 md:p-20 lg:p-24 border-r border-white/5 select-none bg-black/20 relative"
+              className="w-screen h-auto flex-shrink-0 flex flex-col md:flex-row items-center justify-center p-4 md:p-10 lg:p-16 border-r border-white/5 select-none bg-black/20 relative"
             >
               {/* Left Side: Video Preview Card */}
               <div

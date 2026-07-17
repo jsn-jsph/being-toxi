@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -10,6 +10,11 @@ export default function Intro() {
   const rightPanelRef = useRef<HTMLDivElement>(null);
   const leftContentRef = useRef<HTMLDivElement>(null);
   const rightContentRef = useRef<HTMLDivElement>(null);
+  const [leftImageError, setLeftImageError] = useState(false);
+  const [rightImageError, setRightImageError] = useState(false);
+
+  const creatorImage01 = "https://res.cloudinary.com/ubsmxhqk/image/upload/w_400,h_400,c_fill,g_face,f_auto,q_auto/v1784265276/IMG_3021_1_voivb8.heic";
+  const creatorImage02 = "https://res.cloudinary.com/ubsmxhqk/image/upload/w_400,h_400,c_fill,g_face,f_auto,q_auto/v1784265276/IMG_8868.JPG_oy15dj.jpg";
 
   useEffect(() => {
     // Register ScrollTrigger on client mount
@@ -76,6 +81,23 @@ tl.to([leftPanelRef.current, rightPanelRef.current], {
           <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white/20 group-hover/left:border-red-600/40" />
         </div>
 
+        <div className="absolute inset-0 z-0">
+          {!leftImageError ? (
+            <img
+              src={creatorImage01}
+              alt="Creator 01 portrait"
+              className="h-full w-full object-cover object-center"
+              onError={() => setLeftImageError(true)}
+            />
+          ) : (
+            <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-red-600/20 via-neutral-900 to-neutral-800 text-3xl font-semibold text-white/80">
+              JJ
+            </div>
+          )}
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
+        </div>
+
         {/* Content wrapper */}
        <div
   ref={leftContentRef}
@@ -106,6 +128,16 @@ tl.to([leftPanelRef.current, rightPanelRef.current], {
           <p className="w-full text-neutral-400 font-light text-sm md:text-base leading-8 tracking-wide group-hover/left:text-neutral-300 transition-colors duration-500">
            Hi, I'm Jessin Joseph.
 I am a 3rd-year BCA Data Science student with intermediate-level expertise in video production. From filming to post-production, I apply my skills in videography, editing, and direction to deliver polished, high-quality visual content.</p>
+
+          <a
+            href="https://www.instagram.com/jsn_jsph._?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            rel="noreferrer"
+            className="mt-6 inline-flex items-center gap-2 border border-white/10 bg-white/5 px-4 py-2 text-[10px] font-mono uppercase tracking-[0.35em] text-neutral-200 transition-all duration-300 hover:border-red-600/40 hover:bg-red-600/10 hover:text-red-400"
+          >
+            <span>Instagram</span>
+            <span>↗</span>
+          </a>
         </div>
       </div>
 
@@ -123,6 +155,23 @@ I am a 3rd-year BCA Data Science student with intermediate-level expertise in vi
         <div className="absolute inset-6 md:inset-10 border border-white/5 pointer-events-none transition-colors duration-500 group-hover/right:border-red-600/10">
           <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-white/20 group-hover/right:border-red-600/40" />
           <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white/20 group-hover/right:border-red-600/40" />
+        </div>
+
+        <div className="absolute inset-0 z-0">
+          {!rightImageError ? (
+            <img
+              src={creatorImage02}
+              alt="Creator 02 portrait"
+              className="h-full w-full object-cover object-center"
+              onError={() => setRightImageError(true)}
+            />
+          ) : (
+            <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-red-600/20 via-neutral-900 to-neutral-800 text-3xl font-semibold text-white/80">
+              AM
+            </div>
+          )}
+          <div className="absolute inset-0 bg-gradient-to-l from-black via-black/70 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
         </div>
 
         {/* Content wrapper */}
@@ -154,6 +203,16 @@ I am a 3rd-year BCA Data Science student with intermediate-level expertise in vi
           <p className="text-neutral-400 font-light text-sm md:text-base leading-relaxed tracking-wide group-hover/right:text-neutral-300 transition-colors duration-500">
           Hi, I'm Abin M Prakash.
 I am a 3rd-year Mechanical Engineering student with intermediate-level skills in text editing and video production. I handle everything from polishing written copy to videography and direction, ensuring clear, well-structured, and visually engaging content.</p>
+
+          <a
+            href="https://www.instagram.com/abn_nadukkunnil?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            rel="noreferrer"
+            className="mt-6 inline-flex items-center gap-2 border border-white/10 bg-white/5 px-4 py-2 text-[10px] font-mono uppercase tracking-[0.35em] text-neutral-200 transition-all duration-300 hover:border-red-600/40 hover:bg-red-600/10 hover:text-red-400"
+          >
+            <span>Instagram</span>
+            <span>↗</span>
+          </a>
         </div>
       </div>
     </section>

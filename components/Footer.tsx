@@ -2,7 +2,7 @@
 
 export default function Footer() {
   return (
-    <footer className="bg-black py-10 border-t border-white/5 select-none text-neutral-500 font-mono text-[10px] md:text-xs tracking-widest uppercase">
+    <footer className="bg-black py-6 border-t border-white/5 select-none text-neutral-500 font-mono text-[10px] md:text-xs tracking-widest uppercase">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
         
         {/* Left Side: Copyright & Attribution */}
